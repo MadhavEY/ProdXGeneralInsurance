@@ -97,7 +97,7 @@ export class CoverageInfoComponent implements OnInit, OnDestroy {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: 'N18A',
+      defaultVal: '',
     },
     {
       label: 'Coverage Name',
@@ -106,7 +106,7 @@ export class CoverageInfoComponent implements OnInit, OnDestroy {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: 'Pure Protection RP-V01',
+      defaultVal: '',
     },
     {
       label: 'Coverage Type',
@@ -115,7 +115,7 @@ export class CoverageInfoComponent implements OnInit, OnDestroy {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: 'Death_benefits',
+      defaultVal: '',
     },
     {
       label: 'Min Age',
@@ -124,7 +124,7 @@ export class CoverageInfoComponent implements OnInit, OnDestroy {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: '18',
+      defaultVal: '',
     },
     {
       label: 'Max Age',
@@ -133,7 +133,7 @@ export class CoverageInfoComponent implements OnInit, OnDestroy {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: '75',
+      defaultVal: '',
     },
     {
       label: 'Coverage Amount',
@@ -142,7 +142,7 @@ export class CoverageInfoComponent implements OnInit, OnDestroy {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: '500000',
+      defaultVal: '',
     },
     {
       label: 'Coverage Term',
@@ -151,7 +151,7 @@ export class CoverageInfoComponent implements OnInit, OnDestroy {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: '15 years',
+      defaultVal: '',
     },
     {
       label: 'Coverage Efective Date',
@@ -160,7 +160,7 @@ export class CoverageInfoComponent implements OnInit, OnDestroy {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: '12/09/2024',
+      defaultVal: '',
     },
     {
       label: 'Coverage Expiry Date',
@@ -169,7 +169,7 @@ export class CoverageInfoComponent implements OnInit, OnDestroy {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: '9/13/2024',
+      defaultVal: '',
     },
     {
       label: 'Coverage Premium',
@@ -178,7 +178,7 @@ export class CoverageInfoComponent implements OnInit, OnDestroy {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: '500',
+      defaultVal: '',
     },
     {
       label: 'Waiting Time',
@@ -187,7 +187,7 @@ export class CoverageInfoComponent implements OnInit, OnDestroy {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: '90',
+      defaultVal: '',
     },
     {
       label: 'Coverage Condition',
@@ -196,8 +196,7 @@ export class CoverageInfoComponent implements OnInit, OnDestroy {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal:
-        'If the insured dies in a car accident on 15th June 2024 and the death occurs within 180 days due to injuries from that accident, the Accidental Death Benefit of ₹50,000 will be payable to the beneficiaries.',
+      defaultVal: ''
     },
     {
       label: 'Coverage Structure',
@@ -206,7 +205,7 @@ export class CoverageInfoComponent implements OnInit, OnDestroy {
       isVisible: false,
       isMandatory: false,
       category: 'Coverage structure',
-      defaultVal: 'my cover',
+      defaultVal: '',
     },
     {
       label: 'Beneficiary Category',
@@ -215,7 +214,7 @@ export class CoverageInfoComponent implements OnInit, OnDestroy {
       isVisible: false,
       isMandatory: false,
       category: 'Coverage structure',
-      defaultVal: 'my cover',
+      defaultVal: '',
     },
     {
       label: 'Supplemental Death Benefit',
@@ -224,7 +223,7 @@ export class CoverageInfoComponent implements OnInit, OnDestroy {
       isVisible: false,
       isMandatory: false,
       category: 'Coverage structure',
-      defaultVal: 'my cover',
+      defaultVal: '',
     },
   ];
 

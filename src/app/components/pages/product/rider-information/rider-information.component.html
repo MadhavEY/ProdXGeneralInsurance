@@ -263,8 +263,16 @@
                     placeholder="Rider Type"
                     formControlName="riderTpye"
                   >
-                    <mat-option value="active">Child Rider</mat-option>
-                    <mat-option value="inactive">Spouse Rider</mat-option>
+                    <mat-option value="rentalCarDamage">Rental car damage</mat-option>
+                    <mat-option value="petTravelCoverage">Pet travel coverage</mat-option>
+                    <mat-option value="liquidDamageProtection">Liquid Damage Protection</mat-option>
+                    <mat-option value="screenDamageProtection">Screen Damage Protection</mat-option>
+                    <mat-option value="lostMobileProtection">Lost Mobile Protection</mat-option>
+                    <mat-option value="theftProtection">Theft Protection</mat-option>
+                    <mat-option value="zeroDepreciation">Zero Depreciation/ Nil Depreciation</mat-option>
+                    <mat-option value="engineProtection">Engine Protection</mat-option>
+                    <mat-option value="roadsideAssistance">Roadside Assistance</mat-option>
+                    <mat-option value="keyLossProtection">Key Loss Protection</mat-option>
                   </mat-select>
                   <button
                     *ngIf="!fieldsList[3].hasOwnProperty('comments')"

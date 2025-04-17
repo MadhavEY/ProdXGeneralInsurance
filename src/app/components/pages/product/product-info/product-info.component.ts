@@ -83,23 +83,23 @@ export class ProductInfoComponent {
   isFormVisible = false;
   templateFields = [
     'changeOfName',
-    'appointeeChange',
+    // 'appointeeChange',
     'letters',
-    'nachRegisteration',
+    // 'nachRegisteration',
     'changeOfOwner',
     'changeOfNominee',
-    'assignment',
+    // 'assignment',
     'changeOfAddress',
     'changeOfFrequency',
     'changeOfContact',
     'changeOfPan',
-    'duplicatePolicyNumber',
-    'eia',
+    // 'duplicatePolicyNumber',
+    // 'eia',
     'changeOfOccupation',
-    'changeOfPep',
-    'changeOfUid',
-    'certificationOfExistance',
-    'policySearchUI',
+    // 'changeOfPep',
+    'changeOfUid',  
+    // 'certificationOfExistance',
+    // 'policySearchUI',
     'lapse',
     'revival',
     'incDecInService',
@@ -109,8 +109,8 @@ export class ProductInfoComponent {
     'changeOfPremium',
     'freeLookPeriodCancell',
     'deathClaim',
-    'surrender',
-    'maturity',
+    // 'surrender',
+    // 'maturity',
     'policyCancellation',
     'single',
     'yearly',
@@ -126,7 +126,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Boundary Condition',
-      defaultVal: 18,
+      defaultVal: null,
     },
     {
       label: 'Max Entity Age',
@@ -135,7 +135,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Boundary Condition',
-      defaultVal: 65,
+      defaultVal: null,
     },
     {
       label: 'Min Maturity Age',
@@ -144,7 +144,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Boundary Condition',
-      defaultVal: 25,
+      defaultVal: null,
     },
     {
       label: 'Max Maturity Age',
@@ -153,7 +153,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Boundary Condition',
-      defaultVal: 65,
+      defaultVal: null,
     },
     {
       label: 'Min Premium',
@@ -162,7 +162,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Boundary Condition',
-      defaultVal: 1500,
+      defaultVal: null,
     },
     {
       label: 'Max Premium',
@@ -171,7 +171,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Boundary Condition',
-      defaultVal: 10000,
+      defaultVal: null,
     },
     {
       label: 'Payment Type',
@@ -180,7 +180,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Boundary Condition',
-      defaultVal: 'regular',
+      defaultVal: '',
     },
     {
       label: 'PT',
@@ -189,7 +189,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Service - Non-financial Alterations',
-      defaultVal: '5',
+      defaultVal: '',
     },
     {
       label: 'PPT',
@@ -198,7 +198,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Service - Non-financial Alterations',
-      defaultVal: '5',
+      defaultVal: '',
     },
     {
       label: 'Min Sum Assured',
@@ -207,7 +207,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Boundary Condition',
-      defaultVal: 1500,
+      defaultVal: null,
     },
     {
       label: 'Max Sum Assured',
@@ -216,7 +216,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Boundary Condition',
-      defaultVal: 10000,
+      defaultVal: null,
     },
     {
       label: 'Grace Period',
@@ -225,7 +225,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Service - Non-financial Alterations',
-      defaultVal: '15',
+      defaultVal: '',
     },
     {
       label: 'Back Dating',
@@ -234,7 +234,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Service - Non-financial Alterations',
-      defaultVal: 'Yes',
+      defaultVal: '',
     },
     {
       label: 'Gender',
@@ -243,7 +243,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: false,
       category: 'Product Service - Non-financial Alterations',
-      defaultVal: 'male',
+      defaultVal: '',
     },
     {
       label: 'Product Start Date',
@@ -252,7 +252,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: false,
       category: 'Product Service - Non-financial Alterations',
-      defaultVal: '12/09/2024',
+      defaultVal: '',
     },
     {
       label: 'Product End Date',
@@ -261,7 +261,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: false,
       category: 'Product Service - Non-financial Alterations',
-      defaultVal: '12/09/2024',
+      defaultVal: '',
     },
   ];
 
@@ -273,17 +273,17 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Service - Non-financial Alterations',
-      defaultVal: 'Yes',
+      defaultVal: '',
     },
-    {
-      label: 'Appointee Change',
-      type: 'select',
-      formControlName: 'appointeeChange',
-      isVisible: false,
-      isMandatory: true,
-      category: 'Product Service - Non-financial Alterations',
-      defaultVal: 'Yes',
-    },
+    // {
+    //   label: 'Appointee Change',
+    //   type: 'select',
+    //   formControlName: 'appointeeChange',
+    //   isVisible: false,
+    //   isMandatory: true,
+    //   category: 'Product Service - Non-financial Alterations',
+    //   defaultVal: '',
+    // },
     {
       label: 'Letters',
       type: 'select',
@@ -291,17 +291,17 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Service - Non-financial Alterations',
-      defaultVal: 'Yes',
+      defaultVal: '',
     },
-    {
-      label: 'Nach Registration',
-      type: 'select',
-      formControlName: 'nachRegisteration',
-      isVisible: false,
-      isMandatory: true,
-      category: 'Product Service - Non-financial Alterations',
-      defaultVal: 'Yes',
-    },
+    // {
+    //   label: 'Nach Registration',
+    //   type: 'select',
+    //   formControlName: 'nachRegisteration',
+    //   isVisible: false,
+    //   isMandatory: true,
+    //   category: 'Product Service - Non-financial Alterations',
+    //   defaultVal: '',
+    // },
     {
       label: 'Change of Owner',
       type: 'select',
@@ -309,7 +309,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Service - Non-financial Alterations',
-      defaultVal: 'Yes',
+      defaultVal: '',
     },
     {
       label: 'Change of Nominee',
@@ -318,17 +318,17 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Service - Non-financial Alterations',
-      defaultVal: 'Yes',
+      defaultVal: '',
     },
-    {
-      label: 'Assignment/Reassignment',
-      type: 'select',
-      formControlName: 'assignment',
-      isVisible: false,
-      isMandatory: true,
-      category: 'Product Service - Non-financial Alterations',
-      defaultVal: 'Yes',
-    },
+    // {
+    //   label: 'Assignment/Reassignment',
+    //   type: 'select',
+    //   formControlName: 'assignment',
+    //   isVisible: false,
+    //   isMandatory: true,
+    //   category: 'Product Service - Non-financial Alterations',
+    //   defaultVal: '',
+    // },
     {
       label: 'Change of Address',
       type: 'select',
@@ -336,7 +336,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Service - Non-financial Alterations',
-      defaultVal: 'Yes',
+      defaultVal: '',
     },
     {
       label: 'Change of Freq',
@@ -345,7 +345,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Service - Non-financial Alterations',
-      defaultVal: 'Yes',
+      defaultVal: '',
     },
     {
       label: 'Change of Contact Details',
@@ -354,7 +354,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Service - Non-financial Alterations',
-      defaultVal: 'Yes',
+      defaultVal: '',
     },
     {
       label: 'Change in PAN',
@@ -363,26 +363,26 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Service - Non-financial Alterations',
-      defaultVal: 'Yes',
+      defaultVal: '',
     },
-    {
-      label: 'Duplicate policy Number',
-      type: 'select',
-      formControlName: 'duplicatePolicyNumber',
-      isVisible: false,
-      isMandatory: true,
-      category: 'Product Service - Non-financial Alterations',
-      defaultVal: 'Yes',
-    },
-    {
-      label: 'EIA',
-      type: 'select',
-      formControlName: 'eia',
-      isVisible: false,
-      isMandatory: true,
-      category: 'Product Service - Non-financial Alterations',
-      defaultVal: 'Yes',
-    },
+    // {
+    //   label: 'Duplicate policy Number',
+    //   type: 'select',
+    //   formControlName: 'duplicatePolicyNumber',
+    //   isVisible: false,
+    //   isMandatory: true,
+    //   category: 'Product Service - Non-financial Alterations',
+    //   defaultVal: '',
+    // },
+    // {
+    //   label: 'EIA',
+    //   type: 'select',
+    //   formControlName: 'eia',
+    //   isVisible: false,
+    //   isMandatory: true,
+    //   category: 'Product Service - Non-financial Alterations',
+    //   defaultVal: '',
+    // },
     {
       label: 'Change in Occupation',
       type: 'select',
@@ -390,17 +390,17 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Service - Non-financial Alterations',
-      defaultVal: 'Yes',
+      defaultVal: '',
     },
-    {
-      label: 'Change of PEP',
-      type: 'select',
-      formControlName: 'changeOfPep',
-      isVisible: false,
-      isMandatory: true,
-      category: 'Product Service - Non-financial Alterations',
-      defaultVal: 'Yes',
-    },
+    // {
+    //   label: 'Change of PEP',
+    //   type: 'select',
+    //   formControlName: 'changeOfPep',
+    //   isVisible: false,
+    //   isMandatory: true,
+    //   category: 'Product Service - Non-financial Alterations',
+    //   defaultVal: '',
+    // },
     {
       label: 'Change in UID',
       type: 'select',
@@ -408,26 +408,26 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Service - Non-financial Alterations',
-      defaultVal: 'Yes',
+      defaultVal: '',
     },
-    {
-      label: 'Certification of Existance',
-      type: 'select',
-      formControlName: 'certificationOfExistance',
-      isVisible: false,
-      isMandatory: true,
-      category: 'Product Service - Non-financial Alterations',
-      defaultVal: 'Yes',
-    },
-    {
-      label: 'Policy Search UI',
-      type: 'select',
-      formControlName: 'policySearchUI',
-      isVisible: false,
-      isMandatory: true,
-      category: 'Product Service - Non-financial Alterations',
-      defaultVal: 'Yes',
-    },
+    // {
+    //   label: 'Certification of Existance',
+    //   type: 'select',
+    //   formControlName: 'certificationOfExistance',
+    //   isVisible: false,
+    //   isMandatory: true,
+    //   category: 'Product Service - Non-financial Alterations',
+    //   defaultVal: '',
+    // },
+    // {
+    //   label: 'Policy Search UI',
+    //   type: 'select',
+    //   formControlName: 'policySearchUI',
+    //   isVisible: false,
+    //   isMandatory: true,
+    //   category: 'Product Service - Non-financial Alterations',
+    //   defaultVal: '',
+    // },
     {
       label: 'Lapse',
       type: 'select',
@@ -435,7 +435,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Forefeature/Reinstatement',
-      defaultVal: 'LAPSE30',
+      defaultVal: '',
     },
     {
       label: 'Revival',
@@ -444,7 +444,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Forefeature/Reinstatement',
-      defaultVal: 'REVIV30',
+      defaultVal: '',
     },
     {
       label: 'Increase/Decrease in Service',
@@ -453,7 +453,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Servicing- Major Alterations',
-      defaultVal: 'Allowed',
+      defaultVal: '',
     },
     {
       label: 'Change of DOB',
@@ -462,7 +462,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Servicing- Major Alterations',
-      defaultVal: 'Allowed',
+      defaultVal: '',
     },
     {
       label: 'Change of Gender',
@@ -471,7 +471,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Servicing- Major Alterations',
-      defaultVal: 'Allowed',
+      defaultVal: '',
     },
     {
       label: 'Change of PT/FT',
@@ -480,7 +480,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Servicing- Major Alterations',
-      defaultVal: 'Allowed',
+      defaultVal: '',
     },
     {
       label: 'Change of Premium',
@@ -489,7 +489,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Product Servicing- Major Alterations',
-      defaultVal: 'Allowed',
+      defaultVal: '',
     },
     {
       label: 'Free Look Period Cancell',
@@ -498,7 +498,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Termination/Cancellation/Claims',
-      defaultVal: 'Allowed',
+      defaultVal: '',
     },
     {
       label: 'Death Claim',
@@ -507,27 +507,26 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Termination/Cancellation/Claims',
-      defaultVal: 'Allowed',
+      defaultVal: '',
     },
-
-    {
-      label: 'Surrender',
-      type: 'select',
-      formControlName: 'surrender',
-      isVisible: false,
-      isMandatory: true,
-      category: 'Termination/Cancellation/Claims',
-      defaultVal: 'Allowed',
-    },
-    {
-      label: 'Maturity',
-      type: 'select',
-      formControlName: 'maturity',
-      isVisible: false,
-      isMandatory: true,
-      category: 'Termination/Cancellation/Claims',
-      defaultVal: 'Allowed',
-    },
+    // {
+    //   label: 'Surrender',
+    //   type: 'select',
+    //   formControlName: 'surrender',
+    //   isVisible: false,
+    //   isMandatory: true,
+    //   category: 'Termination/Cancellation/Claims',
+    //   defaultVal: '',
+    // },
+    // {
+    //   label: 'Maturity',
+    //   type: 'select',
+    //   formControlName: 'maturity',
+    //   isVisible: false,
+    //   isMandatory: true,
+    //   category: 'Termination/Cancellation/Claims',
+    //   defaultVal: '',
+    // },
     {
       label: 'Policy Cancellation',
       type: 'select',
@@ -535,7 +534,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: true,
       category: 'Termination/Cancellation/Claims',
-      defaultVal: 'Allowed',
+      defaultVal: '',
     },
     {
       label: 'Product Start Date',
@@ -544,7 +543,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: false,
       category: 'Product boundary conditions',
-      defaultVal: '9/5/2024',
+      defaultVal: '',
     },
     {
       label: 'Product End Date',
@@ -553,7 +552,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: false,
       category: 'Product boundary conditions',
-      defaultVal: '9/09/2024',
+      defaultVal: '',
     },
     {
       label: 'Gender',
@@ -571,7 +570,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: false,
       category: 'Product Service - Non-financial Alterations',
-      defaultVal: 'Allowed',
+      defaultVal: '',
     },
     {
       label: 'Beneficiary Update Process',
@@ -580,7 +579,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: false,
       category: 'Product Service - Non-financial Alterations',
-      defaultVal: 'Allowed',
+      defaultVal: '',
     },
     {
       label: 'Termination Reason Code',
@@ -589,7 +588,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: false,
       category: 'Termination/Cancellation/Claims',
-      defaultVal: 'TERM1',
+      defaultVal: '',
     },
     {
       label: 'Premium Adjustment Option',
@@ -598,7 +597,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: false,
       category: 'Premiumand Payment Detail',
-      defaultVal: 'POLC',
+      defaultVal: '',
     },
     {
       label: 'Premium Loading',
@@ -607,7 +606,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: false,
       category: 'Premiumand Payment Detail',
-      defaultVal: 'POLC',
+      defaultVal: '',
     },
     {
       label: 'Premium Payment Methods',
@@ -616,7 +615,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: false,
       category: 'Premiumand Payment Detail',
-      defaultVal: 'POLC',
+      defaultVal: '',
     },
     {
       label: 'Payment Frequency Change',
@@ -625,7 +624,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: false,
       category: 'Premiumand Payment Detail',
-      defaultVal: 'POLC',
+      defaultVal: '',
     },
     {
       label: 'Partial Payment Option',
@@ -634,7 +633,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: false,
       category: 'Premiumand Payment Detail',
-      defaultVal: 'POLC',
+      defaultVal: '',
     },
     {
       label: 'Payment Rescheduling',
@@ -643,7 +642,7 @@ export class ProductInfoComponent {
       isVisible: false,
       isMandatory: false,
       category: 'Premiumand Payment Detail',
-      defaultVal: 'POLC',
+      defaultVal: '',
     },
     {
       label: 'Single',
@@ -842,24 +841,24 @@ export class ProductInfoComponent {
   get changeOfName() {
     return this.productInfoForm.get('changeOfName');
   }
-  get appointeeChange() {
-    return this.productInfoForm.get('appointeeChange');
-  }
+  // get appointeeChange() {
+  //   return this.productInfoForm.get('appointeeChange');
+  // }
   get letters() {
     return this.productInfoForm.get('letters');
   }
-  get nachRegisteration() {
-    return this.productInfoForm.get('nachRegisteration');
-  }
+  // get nachRegisteration() {
+  //   return this.productInfoForm.get('nachRegisteration');
+  // }
   get changeOfOwner() {
     return this.productInfoForm.get('changeOfOwner');
   }
   get changeOfNominee() {
     return this.productInfoForm.get('changeOfNominee');
   }
-  get assignment() {
-    return this.productInfoForm.get('assignment');
-  }
+  // get assignment() {
+  //   return this.productInfoForm.get('assignment');
+  // }
   get changeOfAddress() {
     return this.productInfoForm.get('changeOfAddress');
   }
@@ -872,27 +871,27 @@ export class ProductInfoComponent {
   get changeOfPan() {
     return this.productInfoForm.get('changeOfPan');
   }
-  get duplicatePolicyNumber() {
-    return this.productInfoForm.get('duplicatePolicyNumber');
-  }
-  get eia() {
-    return this.productInfoForm.get('eia');
-  }
+  // get duplicatePolicyNumber() {
+  //   return this.productInfoForm.get('duplicatePolicyNumber');
+  // }
+  // get eia() {
+  //   return this.productInfoForm.get('eia');
+  // }
   get changeOfOccupation() {
     return this.productInfoForm.get('changeOfOccupation');
   }
-  get changeOfPep() {
-    return this.productInfoForm.get('changeOfPep');
-  }
+  // get changeOfPep() {
+  //   return this.productInfoForm.get('changeOfPep');
+  // }
   get changeOfUid() {
     return this.productInfoForm.get('changeOfUid');
   }
-  get certificationOfExistance() {
-    return this.productInfoForm.get('certificationOfExistance');
-  }
-  get policySearchUI() {
-    return this.productInfoForm.get('policySearchUI');
-  }
+  // get certificationOfExistance() {
+  //   return this.productInfoForm.get('certificationOfExistance');
+  // }
+  // get policySearchUI() {
+  //   return this.productInfoForm.get('policySearchUI');
+  // }
   get lapse() {
     return this.productInfoForm.get('lapse');
   }
@@ -920,12 +919,12 @@ export class ProductInfoComponent {
   get deathClaim() {
     return this.productInfoForm.get('deathClaim');
   }
-  get surrender() {
-    return this.productInfoForm.get('surrender');
-  }
-  get maturity() {
-    return this.productInfoForm.get('maturity');
-  }
+  // get surrender() {
+  //   return this.productInfoForm.get('surrender');
+  // }
+  // get maturity() {
+  //   return this.productInfoForm.get('maturity');
+  // }
   get policyCancellation() {
     return this.productInfoForm.get('policyCancellation');
   }

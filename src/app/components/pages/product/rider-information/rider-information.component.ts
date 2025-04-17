@@ -98,7 +98,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: 'RID-01',
+      defaultVal: '',
     },
     {
       label: 'Rider Name 1',
@@ -107,7 +107,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: 'Spouse Coverage Rider',
+      defaultVal: '',
     },
     {
       label: 'Rider Option ',
@@ -116,7 +116,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: 'Mandatory',
+      defaultVal: '',
     },
     {
       label: 'Rider Type',
@@ -125,7 +125,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: 'active',
+      defaultVal: '',
     },
     {
       label: 'Rider Coverage Amount',
@@ -134,7 +134,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: '2000',
+      defaultVal: '',
     },
     {
       label: 'Rider Term',
@@ -143,7 +143,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: '50,000',
+      defaultVal: '',
     },
     {
       label: 'Rider Effective Date',
@@ -152,7 +152,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: '9/5/2024',
+      defaultVal: '',
     },
     {
       label: 'Rider Expiry Date',
@@ -161,7 +161,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: '9/15/2024',
+      defaultVal: '',
     },
     {
       label: 'Rider Premium',
@@ -170,7 +170,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: '12721',
+      defaultVal: '',
     },
     {
       label: 'Rider Wait Period',
@@ -179,7 +179,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: 'active',
+      defaultVal: '',
     },
     {
       label: 'Rider Renewal Option',
@@ -188,7 +188,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: 'yes',
+      defaultVal: '',
     },
     {
       label: 'Rider Conversion Option',
@@ -197,7 +197,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: 'yes',
+      defaultVal: '',
     },
     {
       label: 'Rider Condition',
@@ -206,8 +206,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal:
-        'Covers spouse only if they are listed as a beneficiary on the policy.',
+      defaultVal: '',
     },
     {
       label: 'Min Age',
@@ -216,7 +215,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: '18',
+      defaultVal: '',
     },
     {
       label: 'Max Age',
@@ -225,7 +224,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal: '80',
+      defaultVal: '',
     },
     {
       label: 'Rider Benefits',
@@ -234,8 +233,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal:
-        'Provides an additional coverage amount equal to the sum assured of the base policy in case of accidental death of the spouse.',
+      defaultVal: '',
     },
     {
       label: 'Rider Limitation',
@@ -244,8 +242,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal:
-        'Excludes coverage for pre-existing medical conditions of the spouse.',
+      defaultVal: ''
     },
     {
       label: 'Rider Cancellation Term',
@@ -254,8 +251,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'basicInformation',
-      defaultVal:
-        'Can be canceled within 30 days of purchase without penalty; after 30 days, cancellation is subject to a 10% penalty',
+      defaultVal:''
     },
 
     {
@@ -265,7 +261,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'Rider Coverage Info',
-      defaultVal: 'No',
+      defaultVal: '',
     },
     {
       label: 'Rider Coverage Trigger',
@@ -274,7 +270,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'Rider Coverage Info',
-      defaultVal: 'No',
+      defaultVal: '',
     },
     {
       label: 'Rider Coverage Reductions',
@@ -283,7 +279,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'Rider Coverage Info',
-      defaultVal: '87283',
+      defaultVal: '',
     },
     {
       label: 'Rider Payment Frequency',
@@ -292,7 +288,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'Rider Payout Frequency',
-      defaultVal: 'Monthly',
+      defaultVal: '',
     },
     {
       label: 'Rider Premium Waiver Clause',
@@ -301,7 +297,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'Rider Payout Frequency',
-      defaultVal: '2342',
+      defaultVal: '',
     },
     {
       label: 'Rider Automatic Increase',
@@ -310,7 +306,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'Rider Payout Frequency',
-      defaultVal: '12721',
+      defaultVal: '',
     },
     {
       label: 'Rider Settlement Options',
@@ -319,7 +315,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'Rider Payout Frequency',
-      defaultVal: '8272',
+      defaultVal: '',
     },
     {
       label: 'Rider Contribution Type',
@@ -328,7 +324,7 @@ export class RiderInformationComponent implements OnInit {
       isVisible: false,
       isMandatory: false,
       category: 'Rider Payout Frequency',
-      defaultVal: '12721',
+      defaultVal: '',
     },
   ];
 
