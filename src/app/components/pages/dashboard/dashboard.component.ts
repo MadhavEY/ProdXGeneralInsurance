@@ -23,6 +23,7 @@ export interface PeriodicElement {
   Ageing: string;
   Prioity: string;
   Due_date: string;
+  Completion_date: string;
 }
 export interface Feed {
   entrytype: string;
@@ -51,16 +52,19 @@ export interface Product {
   status: string;
 }
 const ELEMENT_DATA: PeriodicElement[] = [
-  { taskId: 'T1234', Product_name: 'Term Life Secure/TL001', Task_name: 'Complete Product Draft', Status: 'Completed', Description: 'Finalize the draft for the new product template by end of day.', Ageing: '0 days', Prioity: 'low', Due_date: '30/08/2024' },
-  { taskId: 'T1343', Product_name: 'Term Life Plus/TL002', Task_name: 'Template Feedback', Status: 'Completed', Description: 'Finalize the draft for the new product template by end of day.', Ageing: '0 days', Prioity: 'High', Due_date: '30/08/2024' },
-  { taskId: 'T4345', Product_name: 'Term Life Elite/TL003', Task_name: 'Finalize Pricing Strategy', Status: 'In Progress', Description: 'Finalize the draft for the new product template by end of day.', Ageing: '0 days', Prioity: 'low', Due_date: '30/08/2024' },
-  { taskId: 'T6788', Product_name: 'Term Life Elite/TL003', Task_name: 'Review Competitor Products', Status: 'Pending', Description: 'Finalize the draft for the new product template by end of day.', Ageing: '0 days', Prioity: 'low', Due_date: '30/08/2024' },
-  { taskId: 'T7657', Product_name: 'Term Life Elite/TL003', Task_name: 'Review Competitor Product', Status: 'Pending', Description: 'Finalize the draft for the new product template by end of day.', Ageing: '0 days', Prioity: 'High', Due_date: '30/08/2024' },
-  { taskId: 'T4567', Product_name: 'Term Life Plus/TL002', Task_name: 'Complete Product Draft', Status: 'Pending', Description: 'Finalize the draft for the new product template by end of day.', Ageing: '0 days', Prioity: 'low', Due_date: '30/08/2024' },
-  { taskId: 'T3456', Product_name: 'Term Life Plus/TL002', Task_name: 'Template Feedback', Status: 'Pending', Description: 'Go through the feedback from stakeholders on the new product template.', Ageing: '0 days', Prioity: 'High', Due_date: '30/08/2024' },
-  { taskId: 'T7658', Product_name: 'Term Life Secure/TL001', Task_name: 'Finalize Pricing Strategy', Status: 'Pending', Description: 'Go through the feedback from stakeholders on the new product template.', Ageing: '0 days', Prioity: 'low', Due_date: '30/08/2024' },
-  { taskId: 'T4577', Product_name: 'Term Life Secure/TL001', Task_name: 'Finalize Pricing Strategy', Status: 'Pending', Description: 'Go through the feedback from stakeholders on the new product template.', Ageing: '0 days', Prioity: 'low', Due_date: '30/08/2024' },
-  { taskId: 'T3457', Product_name: 'Term Life Secure/TL001', Task_name: 'Finalize Pricing Strategy', Status: 'Pending', Description: 'Go through the feedback from stakeholders on the new product template.', Ageing: '0 days', Prioity: 'High', Due_date: '30/08/2024' },
+  // { taskId: 'T1234', Product_name: 'Term Life Secure/TL001', Task_name: 'Complete Product Draft', Status: 'Completed', Description: 'Finalize the draft for the new product template by end of day.', Ageing: '0 days', Prioity: 'low', Due_date: '30/08/2024' },
+  // { taskId: 'T1343', Product_name: 'Term Life Plus/TL002', Task_name: 'Template Feedback', Status: 'Completed', Description: 'Finalize the draft for the new product template by end of day.', Ageing: '0 days', Prioity: 'High', Due_date: '30/08/2024' },
+  // { taskId: 'T4345', Product_name: 'Term Life Elite/TL003', Task_name: 'Finalize Pricing Strategy', Status: 'In Progress', Description: 'Finalize the draft for the new product template by end of day.', Ageing: '0 days', Prioity: 'low', Due_date: '30/08/2024' },
+  // { taskId: 'T6788', Product_name: 'Term Life Elite/TL003', Task_name: 'Review Competitor Products', Status: 'Pending', Description: 'Finalize the draft for the new product template by end of day.', Ageing: '0 days', Prioity: 'low', Due_date: '30/08/2024' },
+  // { taskId: 'T7657', Product_name: 'Term Life Elite/TL003', Task_name: 'Review Competitor Product', Status: 'Pending', Description: 'Finalize the draft for the new product template by end of day.', Ageing: '0 days', Prioity: 'High', Due_date: '30/08/2024' },
+  // { taskId: 'T4567', Product_name: 'Term Life Plus/TL002', Task_name: 'Complete Product Draft', Status: 'Pending', Description: 'Finalize the draft for the new product template by end of day.', Ageing: '0 days', Prioity: 'low', Due_date: '30/08/2024' },
+  // { taskId: 'T3456', Product_name: 'Term Life Plus/TL002', Task_name: 'Template Feedback', Status: 'Pending', Description: 'Go through the feedback from stakeholders on the new product template.', Ageing: '0 days', Prioity: 'High', Due_date: '30/08/2024' },
+  // { taskId: 'T7658', Product_name: 'Term Life Secure/TL001', Task_name: 'Finalize Pricing Strategy', Status: 'Pending', Description: 'Go through the feedback from stakeholders on the new product template.', Ageing: '0 days', Prioity: 'low', Due_date: '30/08/2024' },
+  // { taskId: 'T4577', Product_name: 'Term Life Secure/TL001', Task_name: 'Finalize Pricing Strategy', Status: 'Pending', Description: 'Go through the feedback from stakeholders on the new product template.', Ageing: '0 days', Prioity: 'low', Due_date: '30/08/2024' },
+  // { taskId: 'T3457', Product_name: 'Term Life Secure/TL001', Task_name: 'Finalize Pricing Strategy', Status: 'Pending', Description: 'Go through the feedback from stakeholders on the new product template.', Ageing: '0 days', Prioity: 'High', Due_date: '30/08/2024' },
+  { taskId: 'T7658', Product_name: 'Overseas - Gold Plus', Task_name: 'Finalize Pricing Strategy', Status: 'Pending', Description: 'Finalize the draft for the new product template by end of day.', Ageing: '0 days', Prioity: 'low', Due_date: '30/04/2025', Completion_date: '30/04/2025' },
+  { taskId: 'T7658', Product_name: 'Mobile Protect​', Task_name: 'Finalize Pricing Strategy', Status: 'In Progress', Description: 'Finalize the draft for the new product template by end of day.', Ageing: '0 days', Prioity: 'low', Due_date: '30/04/2025', Completion_date: '30/04/2025'  },
+  { taskId: 'T7658', Product_name: 'Mobile Protect​', Task_name: 'Finalize Pricing Strategy', Status: 'In Progress', Description: 'Finalize the draft for the new product template by end of day.', Ageing: '0 days', Prioity: 'low', Due_date: '30/04/2025', Completion_date: '30/04/2025'  },
 ];
 const UPDATES_DATA: Feed[] = [
   { entrytype: 'Pinned Announcement', timestamp: '1 hour ago', icon: 'Complete Product Draft', Status: 'Team Meeting Scheduled for August 30, 2024', Description: 'Finalize the draft for the new product template by end of day.' },

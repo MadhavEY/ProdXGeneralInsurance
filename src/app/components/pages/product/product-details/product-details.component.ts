@@ -162,8 +162,8 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
       defaultVal: 'yes',
     },
     {
-      label: 'Rider 1',
-      formControlName: 'riderCheckbox1',
+      label: 'Rental car damage',
+      formControlName: 'rentalCarDamage',
       type: 'text',
       isVisible: false,
       isMandatory: false,
@@ -171,8 +171,80 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
       defaultVal: true,
     },
     {
-      label: 'Rider 2',
-      formControlName: 'riderCheckbox2',
+      label: 'Pet travel coverage',
+      formControlName: 'petTravelCoverage',
+      type: 'text',
+      isVisible: false,
+      isMandatory: false,
+      category: 'Basic Information',
+      defaultVal: false,
+    },
+    {
+      label: 'Liquid Damage Protection',
+      formControlName: 'liquidDamageProtection',
+      type: 'text',
+      isVisible: false,
+      isMandatory: false,
+      category: 'Basic Information',
+      defaultVal: false,
+    },
+    {
+      label: 'Screen Damage Protection',
+      formControlName: 'screenDamageProtection',
+      type: 'text',
+      isVisible: false,
+      isMandatory: false,
+      category: 'Basic Information',
+      defaultVal: false,
+    },
+    {
+      label: 'Lost Mobile Protection',
+      formControlName: 'lostMobileProtection',
+      type: 'text',
+      isVisible: false,
+      isMandatory: false,
+      category: 'Basic Information',
+      defaultVal: false,
+    },
+    {
+      label: 'Theft Protection',
+      formControlName: 'theftProtection',
+      type: 'text',
+      isVisible: false,
+      isMandatory: false,
+      category: 'Basic Information',
+      defaultVal: false,
+    },
+    {
+      label: 'Zero Depreciation/ Nil Depreciation',
+      formControlName: 'zeroDepreciation',
+      type: 'text',
+      isVisible: false,
+      isMandatory: false,
+      category: 'Basic Information',
+      defaultVal: false,
+    },
+    {
+      label: 'Engine Protection',
+      formControlName: 'engineProtection',
+      type: 'text',
+      isVisible: false,
+      isMandatory: false,
+      category: 'Basic Information',
+      defaultVal: false,
+    },
+    {
+      label: 'Roadside Assistance',
+      formControlName: 'roadsideAssistance',
+      type: 'text',
+      isVisible: false,
+      isMandatory: false,
+      category: 'Basic Information',
+      defaultVal: false,
+    },
+    {
+      label: 'Key Loss Protection',
+      formControlName: 'keyLossProtection',
       type: 'text',
       isVisible: false,
       isMandatory: false,
@@ -187,7 +259,7 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
       isMandatory: false,
       category: 'Underwriting Guidelines',
       defaultVal:
-        'Applicants must be between 18 and 60 years of age, with no pre-existing conditions',
+        'Applicants must be between atleast 1 month old and 60 years of age, with no pre-existing conditions',
     },
     {
       label: 'Underwriting Requirements',
@@ -244,8 +316,8 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
     'category',
     'coverage',
     'ridersApplicable',
-    'riderCheckbox1',
-    'riderCheckbox2',
+    'rentalCarDamage',
+    'petTravelCoverage',
   ];
 
   searchFilterList: any = [];
@@ -340,21 +412,74 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
   get category() {
     return this.productDetailsForm.get('category');
   }
+
+  //Riders
   get ridersApplicable() {
     return this.productDetailsForm.get('ridersApplicable');
   }
-  get riderCheckbox1() {
-    return this.productDetailsForm.get('riderCheckbox1');
+  get rentalCarDamage() {
+    return this.productDetailsForm.get('rentalCarDamage');
   }
-  get riderRadio1() {
-    return this.productDetailsForm.get('riderRadio1');
+  get rentalCarDamageRadio() {
+    return this.productDetailsForm.get('rentalCarDamageRadio');
   }
-  get riderCheckbox2() {
-    return this.productDetailsForm.get('riderCheckbox2');
+  get petTravelCoverage() {
+    return this.productDetailsForm.get('petTravelCoverage');
   }
-  get riderRadio2() {
-    return this.productDetailsForm.get('riderRadio2');
+  get petTravelCoverageRadio() {
+    return this.productDetailsForm.get('petTravelCoverageRadio');
   }
+  get liquidDamageProtection() {
+    return this.productDetailsForm.get('liquidDamageProtection');
+  }
+  get liquidDamageProtectionRadio() {
+    return this.productDetailsForm.get('liquidDamageProtectionRadio');
+  }
+  get screenDamageProtection() {
+    return this.productDetailsForm.get('screenDamageProtection');
+  }
+  get screenDamageProtectionRadio() {
+    return this.productDetailsForm.get('screenDamageProtectionRadio');
+  }
+  get lostMobileProtection() {
+    return this.productDetailsForm.get('lostMobileProtection');
+  }
+  get lostMobileProtectionRadio() {
+    return this.productDetailsForm.get('lostMobileProtectionRadio');
+  }
+  get theftProtection() {
+    return this.productDetailsForm.get('theftProtection');
+  }
+  get theftProtectionRadio() {
+    return this.productDetailsForm.get('theftProtectionRadio');
+  }
+  get zeroDepreciation() {
+    return this.productDetailsForm.get('zeroDepreciation');
+  }
+  get zeroDepreciationRadio() {
+    return this.productDetailsForm.get('zeroDepreciationRadio');
+  }
+  get engineProtection() {
+    return this.productDetailsForm.get('engineProtection');
+  }
+  get engineProtectionRadio() {
+    return this.productDetailsForm.get('engineProtectionRadio');
+  }
+  get roadsideAssistance() {
+    return this.productDetailsForm.get('roadsideAssistance');
+  }
+  get roadsideAssistanceRadio() {
+    return this.productDetailsForm.get('roadsideAssistanceRadio');
+  }
+  get keyLossProtection() {
+    return this.productDetailsForm.get('keyLossProtection');
+  }
+  get keyLossProtectionRadio() {
+    return this.productDetailsForm.get('keyLossProtectionRadio');
+  }
+
+  /////
+
   get productName() {
     return this.productDetailsForm.get('productName');
   }
@@ -426,7 +551,7 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
             this.addCoverage(value);
           });
           break;
-        case 'riderCheckbox1':
+        case 'rentalCarDamage':
           this.productDetailsForm.addControl(
             field.formControlName,
             new FormControl(
@@ -435,14 +560,14 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
             )
           );
           this.productDetailsForm.addControl(
-            'riderRadio1',
+            'rentalCarDamageRadio',
             new FormControl({
               value: 'mandatory',
-              disabled: !this.riderCheckbox1.value,
+              disabled: !this.rentalCarDamage.value,
             })
           );
           break;
-        case 'riderCheckbox2':
+        case 'petTravelCoverage':
           this.productDetailsForm.addControl(
             field.formControlName,
             new FormControl(
@@ -451,8 +576,112 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
             )
           );
           this.productDetailsForm.addControl(
-            'riderRadio2',
-            new FormControl({ value: '', disabled: !this.riderCheckbox2.value })
+            'petTravelCoverageRadio',
+            new FormControl({ value: '', disabled: !this.petTravelCoverage.value })
+          );
+          break;
+        case 'liquidDamageProtection':
+          this.productDetailsForm.addControl(
+            field.formControlName,
+            new FormControl(
+              field.defaultVal || '',
+              field.isMandatory ? Validators.required : []
+            )
+          );
+          this.productDetailsForm.addControl(
+            'liquidDamageProtectionRadio',
+            new FormControl({ value: '', disabled: !this.liquidDamageProtection.value })
+          );
+          break;
+        case 'screenDamageProtection':
+          this.productDetailsForm.addControl(
+            field.formControlName,
+            new FormControl(
+              field.defaultVal || '',
+              field.isMandatory ? Validators.required : []
+            )
+          );
+          this.productDetailsForm.addControl(
+            'screenDamageProtectionRadio',
+            new FormControl({ value: '', disabled: !this.screenDamageProtection.value })
+          );
+          break;
+        case 'lostMobileProtection':
+          this.productDetailsForm.addControl(
+            field.formControlName,
+            new FormControl(
+              field.defaultVal || '',
+              field.isMandatory ? Validators.required : []
+            )
+          );
+          this.productDetailsForm.addControl(
+            'lostMobileProtectionRadio',
+            new FormControl({ value: '', disabled: !this.lostMobileProtection.value })
+          );
+          break;
+        case 'theftProtection':
+          this.productDetailsForm.addControl(
+            field.formControlName,
+            new FormControl(
+              field.defaultVal || '',
+              field.isMandatory ? Validators.required : []
+            )
+          );
+          this.productDetailsForm.addControl(
+            'theftProtectionRadio',
+            new FormControl({ value: '', disabled: !this.theftProtection.value })
+          );
+          break;
+        case 'zeroDepreciation':
+          this.productDetailsForm.addControl(
+            field.formControlName,
+            new FormControl(
+              field.defaultVal || '',
+              field.isMandatory ? Validators.required : []
+            )
+          );
+          this.productDetailsForm.addControl(
+            'zeroDepreciationRadio',
+            new FormControl({ value: '', disabled: !this.zeroDepreciation.value })
+          );
+          break;
+        case 'engineProtection':
+          this.productDetailsForm.addControl(
+            field.formControlName,
+            new FormControl(
+              field.defaultVal || '',
+              field.isMandatory ? Validators.required : []
+            )
+          );
+          this.productDetailsForm.addControl(
+            'engineProtectionRadio',
+            new FormControl({ value: '', disabled: !this.engineProtection.value })
+          );
+          break;
+        case 'roadsideAssistance':
+          this.productDetailsForm.addControl(
+            field.formControlName,
+            new FormControl(
+              field.defaultVal || '',
+              field.isMandatory ? Validators.required : []
+            )
+          );
+          this.productDetailsForm.addControl(
+            'roadsideAssistanceRadio',
+            new FormControl({ value: '', disabled: !this.roadsideAssistance.value })
+          );
+          break;
+        case 'keyLossProtection':
+          this.productDetailsForm.addControl(
+            field.formControlName,
+            new FormControl(
+              field.defaultVal || '',
+              field.isMandatory ? Validators.required : []
+            )
+          );
+          this.productDetailsForm.addControl(
+            'keyLossProtectionRadio',
+            new FormControl({ value: '', disabled: !this.keyLossProtection.value })
           );
           break;
         default:
@@ -472,13 +701,45 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
       }
     } else {
       switch (field.formControlName) {
-        case 'riderCheckbox1':
+        case 'rentalCarDamage':
           this.productDetailsForm.removeControl(field.formControlName);
-          this.productDetailsForm.removeControl('riderRadio1');
+          this.productDetailsForm.removeControl('rentalCarDamageRadio');
           break;
-        case 'riderCheckbox2':
+        case 'petTravelCoverage':
           this.productDetailsForm.removeControl(field.formControlName);
-          this.productDetailsForm.removeControl('riderRadio2');
+          this.productDetailsForm.removeControl('petTravelCoverageRadio');
+          break;
+        case 'liquidDamageProtection':
+          this.productDetailsForm.removeControl(field.formControlName);
+          this.productDetailsForm.removeControl('liquidDamageProtectionRadio');
+          break;
+        case 'screenDamageProtection':
+          this.productDetailsForm.removeControl(field.formControlName);
+          this.productDetailsForm.removeControl('screenDamageProtectionRadio');
+          break;
+        case 'lostMobileProtection':
+          this.productDetailsForm.removeControl(field.formControlName);
+          this.productDetailsForm.removeControl('lostMobileProtectionRadio');
+          break;
+        case 'theftProtection':
+          this.productDetailsForm.removeControl(field.formControlName);
+          this.productDetailsForm.removeControl('theftProtectionRadio');
+          break;
+        case 'zeroDepreciation':
+          this.productDetailsForm.removeControl(field.formControlName);
+          this.productDetailsForm.removeControl('zeroDepreciationRadio');
+          break;
+        case 'engineProtection':
+          this.productDetailsForm.removeControl(field.formControlName);
+          this.productDetailsForm.removeControl('engineProtectionRadio');
+          break;
+        case 'roadsideAssistance':
+          this.productDetailsForm.removeControl(field.formControlName);
+          this.productDetailsForm.removeControl('roadsideAssistanceRadio');
+          break;
+        case 'keyLossProtection':
+          this.productDetailsForm.removeControl(field.formControlName);
+          this.productDetailsForm.removeControl('keyLossProtectionRadio');
           break;
         default:
           this.productDetailsForm.removeControl(field.formControlName);
@@ -559,28 +820,116 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
   }
 
   riderCheckBox(event, formControlName) {
-    if (formControlName === 'riderCheckbox1') {
+    if (formControlName === 'rentalCarDamage') {
       if (event.checked) {
-        this.riderRadio1.enable();
-        this.riderRadio1.setValidators([Validators.required]);
+        this.rentalCarDamageRadio.enable();
+        this.rentalCarDamageRadio.setValidators([Validators.required]);
       } else {
-        this.riderRadio1.clearValidators();
-        this.riderRadio1.disable();
+        this.rentalCarDamageRadio.clearValidators();
+        this.rentalCarDamageRadio.disable();
       }
     }
 
-    if (formControlName === 'riderCheckbox2') {
+    if (formControlName === 'petTravelCoverage') {
       if (event.checked) {
-        this.riderRadio2.enable();
-        this.riderRadio2.setValidators([Validators.required]);
+        this.petTravelCoverageRadio.enable();
+        this.petTravelCoverageRadio.setValidators([Validators.required]);
       } else {
-        this.riderRadio2.clearValidators();
-        this.riderRadio2.disable();
+        this.petTravelCoverageRadio.clearValidators();
+        this.petTravelCoverageRadio.disable();
       }
     }
 
-    this.riderRadio1.updateValueAndValidity();
-    this.riderRadio2.updateValueAndValidity();
+    if (formControlName === 'liquidDamageProtection') {
+      if (event.checked) {
+        this.liquidDamageProtectionRadio.enable();
+        this.liquidDamageProtectionRadio.setValidators([Validators.required]);
+      } else {
+        this.liquidDamageProtectionRadio.clearValidators();
+        this.liquidDamageProtectionRadio.disable();
+      }
+    }
+
+    if (formControlName === 'screenDamageProtection') {
+      if (event.checked) {
+        this.screenDamageProtectionRadio.enable();
+        this.screenDamageProtectionRadio.setValidators([Validators.required]);
+      } else {
+        this.screenDamageProtectionRadio.clearValidators();
+        this.screenDamageProtectionRadio.disable();
+      }
+    }
+
+    if (formControlName === 'lostMobileProtection') {
+      if (event.checked) {
+        this.lostMobileProtectionRadio.enable();
+        this.lostMobileProtectionRadio.setValidators([Validators.required]);
+      } else {
+        this.lostMobileProtectionRadio.clearValidators();
+        this.lostMobileProtectionRadio.disable();
+      }
+    }
+
+    if (formControlName === 'theftProtection') {
+      if (event.checked) {
+        this.theftProtectionRadio.enable();
+        this.theftProtectionRadio.setValidators([Validators.required]);
+      } else {
+        this.theftProtectionRadio.clearValidators();
+        this.theftProtectionRadio.disable();
+      }
+    }
+
+    if (formControlName === 'zeroDepreciation') {
+      if (event.checked) {
+        this.zeroDepreciationRadio.enable();
+        this.zeroDepreciationRadio.setValidators([Validators.required]);
+      } else {
+        this.zeroDepreciationRadio.clearValidators();
+        this.zeroDepreciationRadio.disable();
+      }
+    }
+
+    if (formControlName === 'engineProtection') {
+      if (event.checked) {
+        this.engineProtectionRadio.enable();
+        this.engineProtectionRadio.setValidators([Validators.required]);
+      } else {
+        this.engineProtectionRadio.clearValidators();
+        this.engineProtectionRadio.disable();
+      }
+    }
+
+    if (formControlName === 'roadsideAssistance') {
+      if (event.checked) {
+        this.roadsideAssistanceRadio.enable();
+        this.roadsideAssistanceRadio.setValidators([Validators.required]);
+      } else {
+        this.roadsideAssistanceRadio.clearValidators();
+        this.roadsideAssistanceRadio.disable();
+      }
+    }
+
+    if (formControlName === 'keyLossProtection') {
+      if (event.checked) {
+        this.keyLossProtectionRadio.enable();
+        this.keyLossProtectionRadio.setValidators([Validators.required]);
+      } else {
+        this.keyLossProtectionRadio.clearValidators();
+        this.keyLossProtectionRadio.disable();
+      }
+    }
+
+    this.rentalCarDamageRadio.updateValueAndValidity();
+    this.petTravelCoverageRadio.updateValueAndValidity();
+    this.liquidDamageProtectionRadio.updateValueAndValidity();
+    this.screenDamageProtectionRadio.updateValueAndValidity();
+    this.lostMobileProtectionRadio.updateValueAndValidity();
+    this.theftProtectionRadio.updateValueAndValidity();
+    this.zeroDepreciationRadio.updateValueAndValidity();
+    this.engineProtectionRadio.updateValueAndValidity();
+    this.roadsideAssistanceRadio.updateValueAndValidity();
+    this.keyLossProtectionRadio.updateValueAndValidity();
   }
 
   ngOnDestroy(): void {

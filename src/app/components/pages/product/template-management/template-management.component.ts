@@ -17,12 +17,14 @@ export interface TemplateElement {
 }
 
 const ELEMENT_DATA: TemplateElement[] = [
-  {thumbnail: "<image>", productName: 'Standard Level Term Plan', description: "A basic level term insurance plan offering fixed coverage and premiums for a set period.", action: 'Create a New Product using this template'},
-  {thumbnail: "<image>", productName: 'Premium Level Term Plan', description: "A level term plan with slightly higher premiums, providing additional benefits or riders.", action: 'He'},
-  {thumbnail: "<image>", productName: 'Family Protector Level Plan', description: "Provides level term coverage with added benefits for family protection and financial security.", action: 'Li'},
-  {thumbnail: "<image>", productName: 'Income Replacement Level Plan', description: "Designed to replace lost income in the event of the policyholder’s death, with fixed premiums and coverage.", action: 'Be'},
-  {thumbnail: "<image>", productName: 'Flexible Benefit Level Plan', description: "Offers level term coverage with flexible benefits and options to customize based on individual needs.", action: 'B'},
-  {thumbnail: "<image>", productName: 'Extended Coverage Level Plan', description: "Provides extended level term coverage beyond the standard term length, with fixed premiums.", action: 'C'},
+  {thumbnail: "<image>", productName: 'Mobile Protect​', description: "Gadget insurance that will cover your phone in case it is damaged, stolen or lost​", action: 'Create a New Product using this template'},
+  {thumbnail: "<image>", productName: 'Overseas- Gold Plus​', description: "Covers pre-existing conditions, with coverage for hospitalisation and evacuation costs. Ideal for stable and controlled conditions​.", action: 'He'},
+  {thumbnail: "<image>", productName: 'Overseas- Silver Plus​', description: "Most comprehensive travel insurance in Singapore with over 50 benefits, including COVID-19 coverage..", action: 'Li'},
+  {thumbnail: "<image>", productName: 'Overseas- Titanium Plus​', description: "Offers flexible, affordable travel insurance with many add-on options to suit your every need. Personalise your coverage for that perfect fit.​", action: 'Be'},
+  {thumbnail: "<image>", productName: 'Travel Protection​', description: "Provides financial protection for trips within a country, offering coverage for medical emergencies, trip cancellations, lost baggage, and other travel-related risks​.", action: 'B'},
+  {thumbnail: "<image>", productName: 'Total Protection​​', description: "Provides coverage for unexpected repair or replacement costs of household appliances like refrigerators, ovens, and washing machines​​", action: 'C'},
+  {thumbnail: "<image>", productName: 'Accidental Protection​​', description: "Provides financial protection to the insured individual and their family in the event of accidental death, injury, or disability​.", action: 'C'},
+  {thumbnail: "<image>", productName: 'Income Protection​​', description: "Provides financial coverage to the insured in case of accidental death, permanent or partial disability, or temporary total disability, helping to replace lost income and cover expenses​.", action: 'C'},
 ];
 
 @Component({
@@ -47,21 +49,17 @@ export class TemplateManagementComponent implements OnInit{
   dataSource = ELEMENT_DATA;
   subCategories = [];
   categoryList = [
-    'Term Life Insurance',
-    'Whole Life Insurance',
-    'Universal Life Insurance',
-    'Endowment Plans',
-    'Group Life Insurance',
-    'Unit Linked Insurance Plans (ULIPs)'
+    'Mobile​',
+    'Travel​',
+    'Electrical Appliance​',
+    'Personal Accident​'
   ]
 
   subcategoryList = [
-    {category : 'Term Life Insurance', subCategory : ['Basic Term Plans','Convertible Term Plans','Return of Premium Term Plans','Level Term Plans','Decreasing Term Plans']},
-    {category : 'Whole Life Insurance', subCategory : ['Traditional Whole Life','Limited Pay Whole Life','Return of Premium Term Plans','Participating Whole Life','Non-Participating Whole Life']},
-    {category : 'Universal Life Insurance', subCategory : ['Flexible Premium Universal Life','Indexed Universal Life','Guaranteed Universal Life','Variable Universal Life']},
-    {category : 'Endowment Plans', subCategory : ['Regular Endowment Plans','Limited Pay Endowment Plans','Single Premium Endowment Plans','Unit-Linked Endowment Plans']},
-    {category : 'Group Life Insurance', subCategory : ['Group Term Life Insurance','Group Whole Life Insurance','Group Universal Life Insurance','Group Endowment Plans']},
-    {category : 'Unit Linked Insurance Plans (ULIPs)', subCategory : ['Regular Premium ULIPs','Single Premium ULIPs','Flexible Premium ULIPs','Equity Linked ULIPs','Debt Linked ULIPs']},
+    {category : 'Mobile​', subCategory : ['Mobile Phone Insurance​']},
+    {category : 'Travel​', subCategory : ['Overseas Travel Insurance​','Inbound Travel Insurance​','Staycation Insurance​']},
+    {category : 'Electrical Appliance​', subCategory : ['Electrical Appliance Insurance​']},
+    {category : 'Personal Accident​', subCategory : ['Personal Accident​']},
   ];
 
   constructor(private route: Router) {
