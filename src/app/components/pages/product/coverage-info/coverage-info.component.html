@@ -1040,6 +1040,7 @@
           color="primary"
           class="mt-3"
           matStepperNext
+          [disabled]="coverageInfoForm.invalid"
           (click)="nextData()"
           matStepperNext
         >

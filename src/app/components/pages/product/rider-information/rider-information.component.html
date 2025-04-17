@@ -1531,6 +1531,7 @@
           color="primary"
           class="mt-3"
           matStepperNext
+          [disabled]="riderDetailsForm.invalid"
           (click)="nextdata()"
         >
           Next

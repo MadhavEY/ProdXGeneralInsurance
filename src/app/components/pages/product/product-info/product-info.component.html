@@ -3091,6 +3091,7 @@
           color="primary"
           class="mt-3"
           matStepperNext
+          [disabled]="productInfoForm.invalid"
           (click)="nextData()"
         >
           Next
