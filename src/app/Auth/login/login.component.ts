@@ -20,15 +20,20 @@ export class LoginComponent implements OnInit {
   registerForm: FormGroup;
   users = [
     {
-      email: 'adarsh@gmail.com',
+      email: 'admin@gmail.com',
       password: 'admin',
       role: UserRole.product
-    },
-    {
-      email: 'madhav@gmail.com',
-      password: 'admin',
-      role: UserRole.actuary
     }
+    // {
+    //   email: 'adarsh@gmail.com',
+    //   password: 'admin',
+    //   role: UserRole.product
+    // },
+    // {
+    //   email: 'madhav@gmail.com',
+    //   password: 'admin',
+    //   role: UserRole.actuary
+    // }
   ]
   constructor(private router: Router, private fb: FormBuilder) {
   }

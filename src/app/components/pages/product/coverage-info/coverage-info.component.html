@@ -214,35 +214,47 @@
                     placeholder="Coverage Type"
                     formControlName="cover_type"
                   >
-                    <mat-option value="Death_benefits"
-                      >Death Benefit
+                    <mat-option value="Accidental_death_and_permanent_total_disability"
+                      >Accidental death and permanent total disability
                     </mat-option>
-                    <mat-option value="Accidental_benefit"
-                      >Accidental Death Benefitt</mat-option
+                    <mat-option value="Public_transport_double_cover"
+                      >Public transport double cover</mat-option
                     >
-                    <mat-option value="Waiver_benefit">
-                      Waiver of Premium</mat-option
+                    <mat-option value="Funeral_expenses_due_to_an_accident​">
+                      Funeral expenses due to an accident​</mat-option
                     >
-                    <mat-option value="Illness_benefits"
-                      >Critical Illness Benefit</mat-option
+                    <mat-option value="Trip_cancellation​"
+                      >Trip cancellation/ interruption​</mat-option
                     >
-                    <mat-option value="renewal_options"
-                      >Renewal Option</mat-option
+                    <mat-option value="Medical_expenses"
+                      >Medical expenses</mat-option
                     >
-                    <mat-option value="coversion_options"
-                      >Conversion Option</mat-option
+                    <mat-option value="Travel_delay​"
+                      >Travel delay​</mat-option
                     >
-                    <mat-option value="family_benefit"
-                      >Family Income Benefit</mat-option
+                    <mat-option value="Baggage_Loss"
+                      >Baggage Loss/Delay</mat-option
                     >
-                    <mat-option value="premium_benifts"
-                      >Return of Premium</mat-option
+                    <mat-option value="Camera_not_working​"
+                      >Camera not working​</mat-option
                     >
-                    <mat-option value="term_benifts"
-                      >Flexible Term Option</mat-option
+                    <mat-option value="Vibration"
+                      >Vibration</mat-option
                     >
-                    <mat-option value="Income_protection_benifts">
-                      Income Protection Benefit</mat-option
+                    <mat-option value="Faulty_charging_port​">
+                      Faulty charging port​</mat-option
+                    >
+                    <mat-option value="Spoilt_mic_speaker">
+                      Spoilt mic/speaker​</mat-option
+                    >
+                    <mat-option value="Faulty_home_button​">
+                      Faulty home button​​</mat-option
+                    >
+                    <mat-option value="Cracked_screen​">
+                      Cracked screen​​</mat-option
+                    >
+                    <mat-option value="Replacement_phone">
+                      Replacement phone​​</mat-option
                     >
                   </mat-select>
                   <button
@@ -1028,6 +1040,7 @@
           color="primary"
           class="mt-3"
           matStepperNext
+          [disabled]="coverageInfoForm.invalid"
           (click)="nextData()"
           matStepperNext
         >

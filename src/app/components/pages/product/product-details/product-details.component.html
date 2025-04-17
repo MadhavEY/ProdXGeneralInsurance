@@ -68,7 +68,16 @@
           fieldsList[5].isVisible ||
           fieldsList[6].isVisible ||
           fieldsList[7].isVisible ||
-          fieldsList[8].isVisible
+          fieldsList[8].isVisible ||
+          fieldsList[9].isVisible ||
+          fieldsList[10].isVisible ||
+          fieldsList[11].isVisible ||
+          fieldsList[12].isVisible ||
+          fieldsList[13].isVisible ||
+          fieldsList[14].isVisible ||
+          fieldsList[15].isVisible ||
+          fieldsList[16].isVisible ||
+          fieldsList[17].isVisible
         "
       >
         <mat-accordion>
@@ -397,18 +406,18 @@
                   <div class="row">
                     <div class="col-md-4">
                       <mat-checkbox
-                        formControlName="riderCheckbox1"
-                        (change)="riderCheckBox($event, 'riderCheckbox1')"
+                        formControlName="rentalCarDamage"
+                        (change)="riderCheckBox($event, 'rentalCarDamage')"
                       >
-                        Rider 1
+                      Rental car damage
                       </mat-checkbox>
                       <mat-error
                         *ngIf="
-                          riderCheckbox1?.invalid &&
-                          (riderCheckbox1?.dirty || riderCheckbox1?.touched)
+                          rentalCarDamage?.invalid &&
+                          (rentalCarDamage?.dirty || rentalCarDamage?.touched)
                         "
                       >
-                        <span *ngIf="riderCheckbox1?.errors?.['required']"
+                        <span *ngIf="rentalCarDamage?.errors?.['required']"
                           >This information is required.</span
                         >
                       </mat-error>
@@ -420,7 +429,7 @@
                         id="radio-group-label-1"
                         aria-labelledby="radio-group-label-1"
                         aria-describedby="radio-group-label-1"
-                        formControlName="riderRadio1"
+                        formControlName="rentalCarDamageRadio"
                       >
                         <mat-radio-button value="mandatory">
                           Mandatory
@@ -438,18 +447,18 @@
                   <div class="row">
                     <div class="col-md-4">
                       <mat-checkbox
-                        formControlName="riderCheckbox2"
-                        (change)="riderCheckBox($event, 'riderCheckbox2')"
+                        formControlName="petTravelCoverage"
+                        (change)="riderCheckBox($event, 'petTravelCoverage')"
                       >
-                        Rider 2
+                      Pet travel coverage
                       </mat-checkbox>
                       <mat-error
                         *ngIf="
-                          riderCheckbox2?.invalid &&
-                          (riderCheckbox2?.dirty || riderCheckbox2?.touched)
+                          petTravelCoverage?.invalid &&
+                          (petTravelCoverage?.dirty || petTravelCoverage?.touched)
                         "
                       >
-                        <span *ngIf="riderCheckbox2?.errors?.['required']"
+                        <span *ngIf="petTravelCoverage?.errors?.['required']"
                           >This information is required.</span
                         >
                       </mat-error>
@@ -461,7 +470,335 @@
                         id="radio-group-label-1"
                         aria-labelledby="radio-group-label-1"
                         aria-describedby="radio-group-label-1"
-                        formControlName="riderRadio2"
+                        formControlName="petTravelCoverageRadio"
+                      >
+                        <mat-radio-button value="mandatory">
+                          Mandatory
+                        </mat-radio-button>
+                        <mat-radio-button value="optional">
+                          Optional
+                        </mat-radio-button>
+                      </mat-radio-group>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6" *ngIf="fieldsList[10].isVisible">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <mat-checkbox
+                        formControlName="liquidDamageProtection"
+                        (change)="riderCheckBox($event, 'liquidDamageProtection')"
+                      >
+                      Liquid Damage Protection
+                      </mat-checkbox>
+                      <mat-error
+                        *ngIf="
+                          liquidDamageProtection?.invalid &&
+                          (liquidDamageProtection?.dirty || liquidDamageProtection?.touched)
+                        "
+                      >
+                        <span *ngIf="liquidDamageProtection?.errors?.['required']"
+                          >This information is required.</span
+                        >
+                      </mat-error>
+                    </div>
+                    <div class="col-md-8">
+                      <mat-radio-group
+                        aria-label="undefined"
+                        role="radiogroup"
+                        id="radio-group-label-1"
+                        aria-labelledby="radio-group-label-1"
+                        aria-describedby="radio-group-label-1"
+                        formControlName="liquidDamageProtectionRadio"
+                      >
+                        <mat-radio-button value="mandatory">
+                          Mandatory
+                        </mat-radio-button>
+                        <mat-radio-button value="optional">
+                          Optional
+                        </mat-radio-button>
+                      </mat-radio-group>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6" *ngIf="fieldsList[11].isVisible">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <mat-checkbox
+                        formControlName="screenDamageProtection"
+                        (change)="riderCheckBox($event, 'screenDamageProtection')"
+                      >
+                      Screen Damage Protection
+                      </mat-checkbox>
+                      <mat-error
+                        *ngIf="
+                          screenDamageProtection?.invalid &&
+                          (screenDamageProtection?.dirty || screenDamageProtection?.touched)
+                        "
+                      >
+                        <span *ngIf="screenDamageProtection?.errors?.['required']"
+                          >This information is required.</span
+                        >
+                      </mat-error>
+                    </div>
+                    <div class="col-md-8">
+                      <mat-radio-group
+                        aria-label="undefined"
+                        role="radiogroup"
+                        id="radio-group-label-1"
+                        aria-labelledby="radio-group-label-1"
+                        aria-describedby="radio-group-label-1"
+                        formControlName="screenDamageProtectionRadio"
+                      >
+                        <mat-radio-button value="mandatory">
+                          Mandatory
+                        </mat-radio-button>
+                        <mat-radio-button value="optional">
+                          Optional
+                        </mat-radio-button>
+                      </mat-radio-group>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6" *ngIf="fieldsList[12].isVisible">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <mat-checkbox
+                        formControlName="lostMobileProtection"
+                        (change)="riderCheckBox($event, 'lostMobileProtection')"
+                      >
+                      Lost Mobile Protection
+                      </mat-checkbox>
+                      <mat-error
+                        *ngIf="
+                          lostMobileProtection?.invalid &&
+                          (lostMobileProtection?.dirty || lostMobileProtection?.touched)
+                        "
+                      >
+                        <span *ngIf="lostMobileProtection?.errors?.['required']"
+                          >This information is required.</span
+                        >
+                      </mat-error>
+                    </div>
+                    <div class="col-md-8">
+                      <mat-radio-group
+                        aria-label="undefined"
+                        role="radiogroup"
+                        id="radio-group-label-1"
+                        aria-labelledby="radio-group-label-1"
+                        aria-describedby="radio-group-label-1"
+                        formControlName="lostMobileProtectionRadio"
+                      >
+                        <mat-radio-button value="mandatory">
+                          Mandatory
+                        </mat-radio-button>
+                        <mat-radio-button value="optional">
+                          Optional
+                        </mat-radio-button>
+                      </mat-radio-group>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6" *ngIf="fieldsList[13].isVisible">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <mat-checkbox
+                        formControlName="theftProtection"
+                        (change)="riderCheckBox($event, 'theftProtection')"
+                      >
+                      Theft Protection
+                      </mat-checkbox>
+                      <mat-error
+                        *ngIf="
+                          theftProtection?.invalid &&
+                          (theftProtection?.dirty || theftProtection?.touched)
+                        "
+                      >
+                        <span *ngIf="theftProtection?.errors?.['required']"
+                          >This information is required.</span
+                        >
+                      </mat-error>
+                    </div>
+                    <div class="col-md-8">
+                      <mat-radio-group
+                        aria-label="undefined"
+                        role="radiogroup"
+                        id="radio-group-label-1"
+                        aria-labelledby="radio-group-label-1"
+                        aria-describedby="radio-group-label-1"
+                        formControlName="theftProtectionRadio"
+                      >
+                        <mat-radio-button value="mandatory">
+                          Mandatory
+                        </mat-radio-button>
+                        <mat-radio-button value="optional">
+                          Optional
+                        </mat-radio-button>
+                      </mat-radio-group>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6" *ngIf="fieldsList[14].isVisible">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <mat-checkbox
+                        formControlName="zeroDepreciation"
+                        (change)="riderCheckBox($event, 'zeroDepreciation')"
+                      >
+                      Zero Depreciation/ Nil Depreciation
+                      </mat-checkbox>
+                      <mat-error
+                        *ngIf="
+                          zeroDepreciation?.invalid &&
+                          (zeroDepreciation?.dirty || zeroDepreciation?.touched)
+                        "
+                      >
+                        <span *ngIf="zeroDepreciation?.errors?.['required']"
+                          >This information is required.</span
+                        >
+                      </mat-error>
+                    </div>
+                    <div class="col-md-8">
+                      <mat-radio-group
+                        aria-label="undefined"
+                        role="radiogroup"
+                        id="radio-group-label-1"
+                        aria-labelledby="radio-group-label-1"
+                        aria-describedby="radio-group-label-1"
+                        formControlName="zeroDepreciationRadio"
+                      >
+                        <mat-radio-button value="mandatory">
+                          Mandatory
+                        </mat-radio-button>
+                        <mat-radio-button value="optional">
+                          Optional
+                        </mat-radio-button>
+                      </mat-radio-group>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6" *ngIf="fieldsList[15].isVisible">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <mat-checkbox
+                        formControlName="engineProtection"
+                        (change)="riderCheckBox($event, 'engineProtection')"
+                      >
+                      Engine Protection
+                      </mat-checkbox>
+                      <mat-error
+                        *ngIf="
+                          engineProtection?.invalid &&
+                          (engineProtection?.dirty || engineProtection?.touched)
+                        "
+                      >
+                        <span *ngIf="engineProtection?.errors?.['required']"
+                          >This information is required.</span
+                        >
+                      </mat-error>
+                    </div>
+                    <div class="col-md-8">
+                      <mat-radio-group
+                        aria-label="undefined"
+                        role="radiogroup"
+                        id="radio-group-label-1"
+                        aria-labelledby="radio-group-label-1"
+                        aria-describedby="radio-group-label-1"
+                        formControlName="engineProtectionRadio"
+                      >
+                        <mat-radio-button value="mandatory">
+                          Mandatory
+                        </mat-radio-button>
+                        <mat-radio-button value="optional">
+                          Optional
+                        </mat-radio-button>
+                      </mat-radio-group>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6" *ngIf="fieldsList[16].isVisible">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <mat-checkbox
+                        formControlName="roadsideAssistance"
+                        (change)="riderCheckBox($event, 'roadsideAssistance')"
+                      >
+                      Roadside Assistance
+                      </mat-checkbox>
+                      <mat-error
+                        *ngIf="
+                          roadsideAssistance?.invalid &&
+                          (roadsideAssistance?.dirty || roadsideAssistance?.touched)
+                        "
+                      >
+                        <span *ngIf="roadsideAssistance?.errors?.['required']"
+                          >This information is required.</span
+                        >
+                      </mat-error>
+                    </div>
+                    <div class="col-md-8">
+                      <mat-radio-group
+                        aria-label="undefined"
+                        role="radiogroup"
+                        id="radio-group-label-1"
+                        aria-labelledby="radio-group-label-1"
+                        aria-describedby="radio-group-label-1"
+                        formControlName="roadsideAssistanceRadio"
+                      >
+                        <mat-radio-button value="mandatory">
+                          Mandatory
+                        </mat-radio-button>
+                        <mat-radio-button value="optional">
+                          Optional
+                        </mat-radio-button>
+                      </mat-radio-group>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6" *ngIf="fieldsList[17].isVisible">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <mat-checkbox
+                        formControlName="keyLossProtection"
+                        (change)="riderCheckBox($event, 'keyLossProtection')"
+                      >
+                      Key Loss Protection
+                      </mat-checkbox>
+                      <mat-error
+                        *ngIf="
+                          keyLossProtection?.invalid &&
+                          (keyLossProtection?.dirty || keyLossProtection?.touched)
+                        "
+                      >
+                        <span *ngIf="keyLossProtection?.errors?.['required']"
+                          >This information is required.</span
+                        >
+                      </mat-error>
+                    </div>
+                    <div class="col-md-8">
+                      <mat-radio-group
+                        aria-label="undefined"
+                        role="radiogroup"
+                        id="radio-group-label-1"
+                        aria-labelledby="radio-group-label-1"
+                        aria-describedby="radio-group-label-1"
+                        formControlName="keyLossProtectionRadio"
                       >
                         <mat-radio-button value="mandatory">
                           Mandatory
@@ -480,9 +817,9 @@
       </ng-container>
       <ng-container
         *ngIf="
-          fieldsList[10].isVisible ||
-          fieldsList[11].isVisible ||
-          fieldsList[12].isVisible
+          fieldsList[18].isVisible ||
+          fieldsList[19].isVisible ||
+          fieldsList[20].isVisible
         "
       >
         <mat-accordion>
@@ -496,7 +833,7 @@
               <mat-panel-title>Underwriting Details</mat-panel-title>
             </mat-expansion-panel-header>
             <div class="row">
-              <div class="col-md-6" *ngIf="fieldsList[10].isVisible">
+              <div class="col-md-6" *ngIf="fieldsList[18].isVisible">
                 <mat-form-field class="input-fields-height">
                   <mat-label>Underwriting Guideline</mat-label>
                   <textarea
@@ -504,7 +841,7 @@
                     formControlName="underwritingGuidelines"
                   ></textarea>
                   <button
-                    *ngIf="!fieldsList[10].hasOwnProperty('comments')"
+                    *ngIf="!fieldsList[18].hasOwnProperty('comments')"
                     matSuffix
                     mat-icon-button
                     aria-label="comment"
@@ -514,7 +851,7 @@
                   >
                     <mat-icon>comment</mat-icon>
                   </button>
-                  <div class="notification-icon" *ngIf="hasComments(fieldsList[10].formControlName)">
+                  <div class="notification-icon" *ngIf="hasComments(fieldsList[18].formControlName)">
                     <mat-icon>mark_chat_read</mat-icon>
                   </div>
                   <button
@@ -522,7 +859,7 @@
                     mat-icon-button
                     aria-label="Clear"
                     class="delete-field"
-                    (click)="deleteControl(fieldsList[10])"
+                    (click)="deleteControl(fieldsList[18])"
                   >
                     <mat-icon>delete</mat-icon>
                   </button>
@@ -539,7 +876,7 @@
                   </mat-error>
                 </mat-form-field>
               </div>
-              <div class="col-md-6" *ngIf="fieldsList[11].isVisible">
+              <div class="col-md-6" *ngIf="fieldsList[19].isVisible">
                 <mat-form-field class="input-fields-height">
                   <mat-label>Underwriting Requirements</mat-label>
                   <mat-select
@@ -561,7 +898,7 @@
                     >
                   </mat-select>
                   <button
-                    *ngIf="!fieldsList[11].hasOwnProperty('comments')"
+                    *ngIf="!fieldsList[19].hasOwnProperty('comments')"
                     matSuffix
                     mat-icon-button
                     aria-label="comment"
@@ -573,7 +910,7 @@
                   >
                     <mat-icon>comment</mat-icon>
                   </button>
-                  <div class="notification-icon" *ngIf="hasComments(fieldsList[11].formControlName)">
+                  <div class="notification-icon" *ngIf="hasComments(fieldsList[19].formControlName)">
                     <mat-icon>mark_chat_read</mat-icon>
                   </div>
                   <button
@@ -581,7 +918,7 @@
                     mat-icon-button
                     aria-label="Clear"
                     class="delete-field"
-                    (click)="deleteControl(fieldsList[11])"
+                    (click)="deleteControl(fieldsList[19])"
                   >
                     <mat-icon>delete</mat-icon>
                   </button>
@@ -598,7 +935,7 @@
                   </mat-error>
                 </mat-form-field>
               </div>
-              <div class="col-md-6" *ngIf="fieldsList[12].isVisible">
+              <div class="col-md-6" *ngIf="fieldsList[20].isVisible">
                 <mat-form-field class="input-fields-height">
                   <mat-label>Risk Assessment Criteria</mat-label>
                   <textarea
@@ -606,7 +943,7 @@
                     formControlName="riskAssessCriteria"
                   ></textarea>
                   <button
-                    *ngIf="!fieldsList[12].hasOwnProperty('comments')"
+                    *ngIf="!fieldsList[20].hasOwnProperty('comments')"
                     matSuffix
                     mat-icon-button
                     aria-label="comment"
@@ -616,7 +953,7 @@
                   >
                     <mat-icon>comment</mat-icon>
                   </button>
-                  <div class="notification-icon" *ngIf="hasComments(fieldsList[12].formControlName)">
+                  <div class="notification-icon" *ngIf="hasComments(fieldsList[20].formControlName)">
                     <mat-icon>mark_chat_read</mat-icon>
                   </div>
                   <button
@@ -624,7 +961,7 @@
                     mat-icon-button
                     aria-label="Clear"
                     class="delete-field"
-                    (click)="deleteControl(fieldsList[12])"
+                    (click)="deleteControl(fieldsList[20])"
                   >
                     <mat-icon>delete</mat-icon>
                   </button>
@@ -647,9 +984,9 @@
 
       <ng-container
         *ngIf="
-          fieldsList[13].isVisible ||
-          fieldsList[14].isVisible ||
-          fieldsList[15].isVisible
+          fieldsList[21].isVisible ||
+          fieldsList[22].isVisible ||
+          fieldsList[23].isVisible
         "
       >
         <mat-accordion>
@@ -663,7 +1000,7 @@
               <mat-panel-title>Premium Details</mat-panel-title>
             </mat-expansion-panel-header>
             <div class="row">
-              <div class="col-md-6" *ngIf="fieldsList[13].isVisible">
+              <div class="col-md-6" *ngIf="fieldsList[21].isVisible">
                 <mat-form-field class="input-fields-height">
                   <mat-label>Refundable Premium</mat-label>
                   <mat-select
@@ -674,7 +1011,7 @@
                     <mat-option value="no">No</mat-option>
                   </mat-select>
                   <button
-                    *ngIf="!fieldsList[13].hasOwnProperty('comments')"
+                    *ngIf="!fieldsList[21].hasOwnProperty('comments')"
                     matSuffix
                     mat-icon-button
                     aria-label="comment"
@@ -684,7 +1021,7 @@
                   >
                     <mat-icon>comment</mat-icon>
                   </button>
-                  <div class="notification-icon" *ngIf="hasComments(fieldsList[13].formControlName)">
+                  <div class="notification-icon" *ngIf="hasComments(fieldsList[21].formControlName)">
                     <mat-icon>mark_chat_read</mat-icon>
                   </div>
                   <button
@@ -692,7 +1029,7 @@
                     mat-icon-button
                     aria-label="Clear"
                     class="delete-field"
-                    (click)="deleteControl(fieldsList[13])"
+                    (click)="deleteControl(fieldsList[21])"
                   >
                     <mat-icon>delete</mat-icon>
                   </button>
@@ -708,7 +1045,7 @@
                   </mat-error>
                 </mat-form-field>
               </div>
-              <div class="col-md-6" *ngIf="fieldsList[14].isVisible">
+              <div class="col-md-6" *ngIf="fieldsList[22].isVisible">
                 <mat-form-field class="input-fields-height">
                   <mat-label>Tax Benefits</mat-label>
                   <mat-select
@@ -719,7 +1056,7 @@
                     <mat-option value="no">No</mat-option>
                   </mat-select>
                   <button
-                    *ngIf="!fieldsList[14].hasOwnProperty('comments')"
+                    *ngIf="!fieldsList[22].hasOwnProperty('comments')"
                     matSuffix
                     mat-icon-button
                     aria-label="comment"
@@ -729,7 +1066,7 @@
                   >
                     <mat-icon>comment</mat-icon>
                   </button>
-                  <div class="notification-icon" *ngIf="hasComments(fieldsList[14].formControlName)">
+                  <div class="notification-icon" *ngIf="hasComments(fieldsList[22].formControlName)">
                     <mat-icon>mark_chat_read</mat-icon>
                   </div>
                   <button
@@ -737,7 +1074,7 @@
                     mat-icon-button
                     aria-label="Clear"
                     class="delete-field"
-                    (click)="deleteControl(fieldsList[14])"
+                    (click)="deleteControl(fieldsList[22])"
                   >
                     <mat-icon>delete</mat-icon>
                   </button>
@@ -753,7 +1090,7 @@
                   </mat-error>
                 </mat-form-field>
               </div>
-              <div class="col-md-6" *ngIf="fieldsList[15].isVisible">
+              <div class="col-md-6" *ngIf="fieldsList[23].isVisible">
                 <mat-form-field class="input-fields-height">
                   <mat-label>Renewal</mat-label>
                   <mat-select
@@ -767,7 +1104,7 @@
                     >
                   </mat-select>
                   <button
-                    *ngIf="!fieldsList[15].hasOwnProperty('comments')"
+                    *ngIf="!fieldsList[23].hasOwnProperty('comments')"
                     matSuffix
                     mat-icon-button
                     aria-label="comment"
@@ -777,7 +1114,7 @@
                   >
                     <mat-icon>comment</mat-icon>
                   </button>
-                  <div class="notification-icon" *ngIf="hasComments(fieldsList[15].formControlName)">
+                  <div class="notification-icon" *ngIf="hasComments(fieldsList[23].formControlName)">
                     <mat-icon>mark_chat_read</mat-icon>
                   </div>
                   <button
@@ -785,7 +1122,7 @@
                     mat-icon-button
                     aria-label="Clear"
                     class="delete-field"
-                    (click)="deleteControl(fieldsList[15])"
+                    (click)="deleteControl(fieldsList[23])"
                   >
                     <mat-icon>delete</mat-icon>
                   </button>
@@ -812,6 +1149,7 @@
           mat-flat-button
           color="primary"
           class="mt-3"
+          [disabled]="productDetailsForm.invalid"
           matStepperNext
           (click)="nextData()"
         >
